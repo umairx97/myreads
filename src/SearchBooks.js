@@ -17,7 +17,7 @@ class SearchBooks extends Component {
       },
       () => {
         if (this.state.searchText.length > 0 && this.state.filteredBooks) {
-          BooksAPI.search(this.state.searchText, 40).then(books => {
+          BooksAPI.search(this.state.searchText, 20).then(books => {
             this.setState({
               filteredBooks: books
             });
